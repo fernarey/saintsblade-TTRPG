@@ -1,3 +1,4 @@
+package javaclasses;
 import java.util.List;
 
 public class RPGClass {

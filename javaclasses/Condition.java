@@ -1,4 +1,4 @@
-import java.util.List;
+package javaclasses;
 import java.util.Map;
 
 public class Condition {

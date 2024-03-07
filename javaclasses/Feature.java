@@ -1,5 +1,5 @@
+package javaclasses;
 import java.util.List;
-import java.util.Map;
 
 public class Feature {
   private String name;
