@@ -1,4 +1,4 @@
-class Character{
+class Person {
   #name
   #level
   #classes
@@ -188,4 +188,4 @@ class Character{
   setFeatures = (features) => this.#features = features;
 }
 
-export default Character;
+export default Person;

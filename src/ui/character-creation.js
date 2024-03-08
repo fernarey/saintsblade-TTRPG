@@ -1,5 +1,4 @@
 const xhr = new XMLHttpRequest();
-// For example: https://github.com/lerocha/chinook-database/raw/master/ChinookDatabase/DataSources/Chinook_Sqlite.sqlite
 xhr.open('GET', 'https://github.com/fernarey/brightrealmTTRPG/blob/main/src/resources/data/test.sqlite', true);
 xhr.responseType = 'arraybuffer';
 

@@ -1,0 +1,14 @@
+{
+  "name": "Class Name",
+  "overview":"example of an overview",
+  "creation-title": "Creating a XXX",
+  "creation": "this is how one creates a XXX",
+  "class-features-title": "Class Features",
+  "class-features": "As a XXX you gain the following features",
+  "feature-1-title": "Feature 1",
+  "feature-1-desc": "Feature 1 grants you YYY",
+  "feature-2-title": "Feature 2",
+  "feature-2-desc": "Feature 2 grants you YYY",
+  "feature-3-title": "Feature 3",
+  "feature-3-desc": "Starting at 2nd level, Feature 3 grants you YYY"
+}

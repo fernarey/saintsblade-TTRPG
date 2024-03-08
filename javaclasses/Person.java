@@ -3,7 +3,7 @@ package javaclasses;
 import java.util.List;
 import java.util.Map;
 
-public class Character {
+public class Person {
   // basic information
   private String name;
   private int level;
@@ -39,12 +39,12 @@ public class Character {
 
 
   // METHOD: basic constuctor, takes no inputs
-  public Character() {
+  public Person() {
     // TODO
   }
 
   // METHOD: more specific constructor, mostly for testing
-  public Character(String name, int level) {
+  public Person(String name, int level) {
     this.name = name;
     this.level = level;
     // TODO
@@ -62,21 +62,21 @@ public class Character {
 /////////////// Java Object Methods /////////////////////////
 
   // METHOD: cloning method
-  // returns a copy of the character
+  // returns a copy of the Person
   @Override
-  public Character clone(){
+  public Person clone(){
     return this; 
     // TODO
   }
 
-  // METHOD: determines if two characters are the same
+  // METHOD: determines if two Persons are the same
   @Override
   public boolean equals(Object other){
     return false;
     // TODO
   }
 
-  // METHOD: allows for characters to be sorted in a list
+  // METHOD: allows for Persons to be sorted in a list
   @Override
   public int hashCode() {
     return name.hashCode()+level;
@@ -84,7 +84,7 @@ public class Character {
 
   @Override
   public String toString() {
-    String result = "Character{ "+name;
+    String result = "Person{ "+name;
     for (RPGClass c : this.classes.keySet()) {
       result += " "+c+this.classes.get(c)+" /";
     }
