@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Basic HTML Page</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.5.0/sql-wasm.js"></script>
+    <script>
+      // Load sql.js WebAssembly file
+      let config = {
+        locateFile: () => "../sql-js/sql-wasm.wasm",
+      };
+      initSqlJs(config).then(function (SQL) {
+          console.log("sql.js initialized 🎉");
+      });
+    </script>
+</head>
+<body>
+  <h1>Welcome to My Basic HTML Page</h1>
+  <p>This is a simple HTML page.</p>
+</body>
+
+<script src="../ui/character-creation.js"></script>
+
+</html>

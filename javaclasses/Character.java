@@ -15,6 +15,7 @@ public class Character {
   private List<String> officialStats;
   private Map<String, Integer> stats;
   private Map<String, Integer> savingThrowMod;
+  private List<String> officialSenses;
   private Map<String, Integer> senses;
   private int walkingSpeed;
   private int initiative;

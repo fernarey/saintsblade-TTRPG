@@ -1,0 +1,84 @@
+/* credits to https://mirandacwong.com/ for the outline */
+html{
+  overflow-x: hidden;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+/* Desktop */
+
+.topnav { 
+
+}
+
+.topnav .logo {
+
+}
+
+.topnav .logo img {
+
+}
+
+.topnav a:hover {
+
+}
+
+.topnav a.active {
+
+}
+
+.topnav .openMenu {
+
+}
+
+.topnav .mainMenu{
+
+}
+
+.topnav .mainMenu .closeMenu{
+
+}
+
+@media (max-width: 900px) {
+  .topnav { 
+
+  }
+  
+  .topnav .logo {
+  
+  }
+  
+  .topnav .logo img {
+  
+  }
+  
+  .topnav a:hover {
+  
+  }
+  
+  .topnav a.active {
+  
+  }
+  
+  .topnav .openMenu {
+  
+  }
+  
+  .topnav .mainMenu{
+  
+  }
+  
+  .topnav .mainMenu .closeMenu{
+  
+  }
+  
+  .openMenu img{
+  
+  }
+  
+  .closeMenu img {
+  
+  }
+}
