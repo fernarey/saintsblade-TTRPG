@@ -1,30 +1,30 @@
 class Person {
   #name
+  #age
+  #desc
   #level
-  #classes
+  #class
   #maxHP
   #currHP
 
-  // stats
+  // Specialties
   #officialStats
   #stats
   #savingThrowMod
-  #officialSenses
-  #senses
-  #walkingSpeed
-  #initiative
-  #armorClass
-  #inspiration
+  #traversal
+  #arcaneBonus
+  #physicalBonus
   #currConditions
 
-  // skills
-  #officialSkills
-  #proficientSkills
-  #skillMod
+  // specialities
+  #officialSpecialties
+  #proficientSpecialties
+  #specialtyMod
 
   // proficiencies
   #proficiencyBonus
-  #officialProficiencies
+  #officialProficiencies 
+  // like armor, etc.
   #proficiencies
 
   // available information
@@ -34,42 +34,37 @@ class Person {
 
   constructor(){
       this.#name = ""
+      this.#age = 0
+      this.#desc = ""
       this.#level = 0
-      this.#classes = new Map()
+      this.#class = new RPGClass()
       this.#maxHP = 0
       this.#currHP = 0
-      this.#armorClass = 10
 
-      // stats 
-      this.#officialStats = new Array("STAT1", "STAT2")
+      // Specialties 
+      this.#officialStats = new Array("BRILLIANCE", "TEMPERAMENT", "ATHLETICISM", "FORTITUDE", "SUPERSTITION")
       this.#stats = new Map()
       this.#savingThrowMod = new Map()
-      for (const stat of this.#officialStats) {
-        this.#stats.set(stat, 10)
-        this.#savingThrowMod.set(stat, 10)
+      for (const Specialty of this.#officialStats) {
+        this.#stats.set(Specialty, 10)
+        this.#savingThrowMod.set(Specialty, 0)
       }
-      this.#officialSenses = new Array("passive X")
-      this.#senses = new Map()
-      for (const sense of this.#officialSenses) {
-        this.#senses.set(sense, 10)
-      }
-      this.#walkingSpeed = 30
-      this.#initiative = 0
-      this.#armorClass = 10
-      this.#inspiration = false
+      this.#traversal = 30
+      this.#arcaneBonus = 0
+      this.#physicalBonus = 0
       this.#currConditions = new Array()
 
-      // skills
-      this.#officialSkills = new Array("SKILL1", "SKILL2")
-      this.#proficientSkills = new Array()
-      this.#skillMod = new Map()
-      for (const skill of this.#officialSkills) {
-        this.#skillMod.set(skill, 0)
+      // specialty
+      this.#officialSpecialties = new Array("Conversation", "Inconspicuity", "Recollection", "Inspection", "Reminiscence", "Reactivity", "Performance", "Agility", "Endurance", "Discipline")
+      this.#proficientSpecialties = new Array()
+      this.#specialtyMod = new Map()
+      for (const skill of this.#officialSpecialties) {
+        this.#specialtyMod.set(skill, 0)
       }
 
       // proficiencies
       this.#proficiencyBonus = 0
-      this.#officialProficiencies = new Array("PROF1", "PROF2")
+      this.#officialProficiencies = new Array("Armor", "Weapons", "Tools", "Languages")
       this.#proficiencies = new Map()
       for (const prof of this.#officialProficiencies) {
         this.#proficiencies.set(prof, new Array())
@@ -103,30 +98,30 @@ class Person {
   }
 
   addClass(newClass) {
-    this.#classes.set(newClass.name(), 1)
+    this.#class.set(newClass.name(), 1)
     this.#spells.push(newClass.getAvailableSpells(1))
     this.#features.push(newClass.getClassFeatures(1))
     this.#inventory.push(newClass.startingInventory())
   }
 
   levelUp(currClass) {
-    this.#classes.set(currClass.name(), this.#classes.get(currClass) + 1)
-    console.log(this.#classes)
-    this.#spells.push(newClass.getAvailableSpells(this.#classes.get(currClass) + 1))
+    this.#class.set(currClass.name(), this.#class.get(currClass) + 1)
+    console.log(this.#class)
+    this.#spells.push(newClass.getAvailableSpells(this.#class.get(currClass) + 1))
     console.log(this.#spells)
-    this.#features.push(newClass.getClassFeatures(this.#classes.get(currClass) + 1))
+    this.#features.push(newClass.getClassFeatures(this.#class.get(currClass) + 1))
     console.log(this.#features)
-    this.#level = sumArray(this.#classes.values())
+    this.#level = sumArray(this.#class.values())
     if (this.#level % 2 == 0) {
       this.#proficiencyBonus += 1
       this.updateSkills()
     } 
-    console.log(this.#skillMod)
+    console.log(this.#specialtyMod)
   }
 
   updateSkills() {
-    for (const skill of this.#proficientSkills) {
-      this.#skillMod.set(skill, this.#skillMod.get(skill) + 1)
+    for (const skill of this.#proficientSpecialties) {
+      this.#specialtyMod.set(skill, this.#specialtyMod.get(skill) + this.#proficiencyBonus)
     }
   }
 
@@ -136,24 +131,22 @@ class Person {
   }
 
   // Getter functions
+  // Getter functions
   getName = () => this.#name;
   getLevel = () => this.#level;
-  getClasses = () => this.#classes;
+  getClasses = () => this.#class;
   getMaxHP = () => this.#maxHP;
   getCurrHP = () => this.#currHP;
-  getOfficialStats = () => this.#officialStats;
+  getOfficialStats = () => this.#officialSpecialties;
   getStats = () => this.#stats;
   getSavingThrowMod = () => this.#savingThrowMod;
-  getOfficialSenses = () => this.#officialSenses;
-  getSenses = () => this.#senses;
-  getWalkingSpeed = () => this.#walkingSpeed;
-  getInitiative = () => this.#initiative;
-  getArmorClass = () => this.#armorClass;
-  getInspiration = () => this.#inspiration;
+  getTraversal = () => this.#traversal;
+  getArcaneBonus = () => this.#arcaneBonus;
+  getPhysicalBonus = () => this.#physicalBonus;
   getCurrConditions = () => this.#currConditions;
-  getOfficialSkills = () => this.#officialSkills;
-  getProficientSkills = () => this.#proficientSkills;
-  getSkillMod = () => this.#skillMod;
+  getOfficialSpecialties = () => this.#officialSpecialties;
+  getProficientSpecialties = () => this.#proficientSpecialties;
+  getSpecialtyMod = () => this.#specialtyMod;
   getProficiencyBonus = () => this.#proficiencyBonus;
   getOfficialProficiencies = () => this.#officialProficiencies;
   getProficiencies = () => this.#proficiencies;
@@ -164,22 +157,18 @@ class Person {
   // Setter functions
   setName = (name) => this.#name = name;
   setLevel = (level) => this.#level = level;
-  setClasses = (classes) => this.#classes = classes;
   setMaxHP = (maxHP) => this.#maxHP = maxHP;
   setCurrHP = (currHP) => this.#currHP = currHP;
-  setOfficialStats = (officialStats) => this.#officialStats = officialStats;
+  setOfficialStats = (officialStats) => this.#officialSpecialties = officialSpecialties;
   setStats = (stats) => this.#stats = stats;
   setSavingThrowMod = (savingThrowMod) => this.#savingThrowMod = savingThrowMod;
-  setOfficialSenses = (officialSenses) => this.#officialSenses = officialSenses;
-  setSenses = (senses) => this.#senses = senses;
-  setWalkingSpeed = (walkingSpeed) => this.#walkingSpeed = walkingSpeed;
-  setInitiative = (initiative) => this.#initiative = initiative;
-  setArmorClass = (armorClass) => this.#armorClass = armorClass;
-  setInspiration = (inspiration) => this.#inspiration = inspiration;
+  setTraversal = (traversal) => this.#traversal = traversal;
+  setArcaneBonus = (arcaneBonus) => this.#arcaneBonus = arcaneBonus;
+  setPhysicalBonus = (physicalBonus) => this.#physicalBonus = physicalBonus;
   setCurrConditions = (currConditions) => this.#currConditions = currConditions;
-  setOfficialSkills = (officialSkills) => this.#officialSkills = officialSkills;
-  setProficientSkills = (proficientSkills) => this.#proficientSkills = proficientSkills;
-  setSkillMod = (skillMod) => this.#skillMod = skillMod;
+  setOfficialSpecialties = (officialSpecialties) => this.#officialSpecialties = officialSpecialties;
+  setProficientSpecialties = (proficientSpecialties) => this.#proficientSpecialties = proficientSpecialties;
+  setSpecialtyMod = (specialtyMod) => this.#specialtyMod = specialtyMod;
   setProficiencyBonus = (proficiencyBonus) => this.#proficiencyBonus = proficiencyBonus;
   setOfficialProficiencies = (officialProficiencies) => this.#officialProficiencies = officialProficiencies;
   setProficiencies = (proficiencies) => this.#proficiencies = proficiencies;
@@ -187,5 +176,3 @@ class Person {
   setInventory = (inventory) => this.#inventory = inventory;
   setFeatures = (features) => this.#features = features;
 }
-
-export default Person;

@@ -8,6 +8,17 @@ runme:
 
 Brightrealm University is a a fantasy-inspired TTRPG based on the experiences of academia.
 
+# Toolbox
+
+Languages: Java, JavaScript, HTML, CSS, SQL
+
+Frameworks: SQL.js, PostgreSQL, Bootstrap
+
+Systems: Git, GitHub, Visual Studio Code, IntelliJ IDEA
+
+Maybe:
+Azure DevOps, GCP, Hadoop, jQuery
+
 # File Structure
 
 🇲🇽 denotes files/folders that Reyna should be editing
@@ -99,7 +110,7 @@ This is a class that contains the features that can be applied to characters. It
 
 ### 🇲🇽 `Main.java`
 
-This is the main class for the game. It contains the main method and the game loop. It is the class that should be run to start the game so that Reyna can test all of the classes. 
+This is the main class for the game. It contains the main method and the game loop. It is the class that should be run to start the game so that Reyna can test all of the classes.
 
 ### 🇲🇽 `Person.java`
 
@@ -115,7 +126,8 @@ This is a class that contains the spells that can be cast by characters. It cont
 
 ## src
 
-This is a folder that contains the source code for the website and game. It contains 
+This is a folder that contains the source code for the website and game. It contains
+
 - the data stored about all users, characters, gear, etc.
 - the pages for the website
 - the resources (such as images and materials)
@@ -130,31 +142,50 @@ This folder contains all the `sqlite` databases that store the data for the game
 ### pages
 
 This folder contains all the pages for the website. It contains the main page, the character creation page, the character page, the gear page, etc. All the files within will be used so that the user can navigate the website and play the game. The current pages are:
-- materials 
-  - will contain templates for all game materials, such as class information, spell cards, etc.
+
+- materials
+
+   - will contain templates for all game materials, such as class information, spell cards, etc.
+
 - `campaign-manager.html`
-  - will contain the page for a user to manage their campaigns, such as creating a new campaign, updating locations, encounters, NPCs, etc.
+
+   - will contain the page for a user to manage their campaigns, such as creating a new campaign, updating locations, encounters, NPCs, etc.
+
 - `campaign.html`
-  - will contain the page for a user to view a campaign, such as viewing the locations, encounters, NPCs, etc.
+
+   - will contain the page for a user to view a campaign, such as viewing the locations, encounters, NPCs, etc.
+
 - `character-creation.html`
-  - will contain the page for a user to create a new character
+
+   - will contain the page for a user to create a new character
+
 - `character.html`
-  - will contain the page for a user to view a character
+
+   - will contain the page for a user to view a character
+
 - `materials.html`
-  - will contain the landing page for a user to view all game materials
+
+   - will contain the landing page for a user to view all game materials
+
 - `profile.html`
-  - will contain the page for a user to view their profile, characters, and campaigns
+
+   - will contain the page for a user to view their profile, characters, and campaigns
+
 - `search.html`
-  - will contain the page for a user to search for a campaign, character, or gear
+
+   - will contain the page for a user to search for a campaign, character, or gear
 
 ### 🇲🇽 resources
 
 This folder contains all the resources for the website. It contains the images, game materials that will be used to make the website fit with the information of the TTRPG. The current resources are:
 
 - 🇲🇽 img (images)
-  - will contain all the images for the website, such as the logo, background, etc.
+
+   - will contain all the images for the website, such as the logo, background, etc.
+
 - 🇲🇽 materials
-  - will contain all the game materials in `json` format, such as class information, so that it can be displayed on the website.
+
+   - will contain all the game materials in `json` format, such as class information, so that it can be displayed on the website.
 
 ### scripts
 
