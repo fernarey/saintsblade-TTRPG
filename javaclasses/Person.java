@@ -2,6 +2,7 @@ package javaclasses;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 public class Person {
   // BASICS
@@ -68,6 +69,15 @@ public class Person {
     return this.currHP;
   }
 
+  public int heal(int damageHealed) {
+    if (damageHealed > maxHP) {
+      int maxHeal = maxHP - damageHealed;
+      damageHealed = maxHP;
+    }
+    currHP = this.currHP + damageHealed;
+    return this.currHP;
+  }
+
   public void levelUp() {
     this.level++;
     if (this.level % 5 == 0) {
@@ -78,14 +88,12 @@ public class Person {
   public void promptMultiClass() {
 
   }
-  
-  public int heal(int damageHealed) {
-    if (damageHealed > maxHP) {
-      int maxHeal = maxHP - damageHealed;
-      damageHealed = maxHP;
-    }
-    currHP = this.currHP + damageHealed;
-    return this.currHP;
+
+  public int rollInitiative() {
+    Random r = new Random();
+    int initiative = r.nextInt(1, 20);
+    initiative += proficiencyBonus;
+    return  initiative;
   }
 
   public void setStat(String name, int value) {
