@@ -7,6 +7,7 @@ public class Person {
   // BASICS
   private String name;
   private int level;
+  private Lineage lineage;
   private Map<RPGClass, Integer> classes;
   private int maxHP;
   private int currHP;
@@ -40,7 +41,7 @@ public class Person {
 
   // METHOD: CONSTRUCTOR OF "PERSON"
   public Person() {
-    // TODO
+    // TODO: initialize all data structures
   }
 
   // METHOD: more specific constructor, mostly for testing
@@ -48,6 +49,13 @@ public class Person {
     this.name = name;
     this.level = level;
     // TODO
+  }
+
+  public void setAllStats(int stat1, int stat2, int stat3, int stat4, int stat5) {
+    // TODO: update stats
+    // update HP
+    // update senses
+    // update initiative, etc.
   }
 
   // TODO: add more methods such as
@@ -67,6 +75,22 @@ public class Person {
     }
     currHP = this.currHP + damageHealed;
     return this.currHP;
+  }
+
+  public void setStat(String name, int value) {
+    this.stats.put(name, value);
+    // TODO: update armor class
+    // update HP
+    // update senses
+    // update initiative, etc.
+  }
+  
+  public void addClass(RPGClass newClass) {
+    // this.#class.set(newClass.name(), 1)
+    // this.#spells.push(newClass.getAvailableSpells(1))
+    // this.#features.push(newClass.getClassFeatures(1))
+    // this.#inventory.push(newClass.startingInventory())
+
   }
 
 /////////////// Java Object Methods /////////////////////////
