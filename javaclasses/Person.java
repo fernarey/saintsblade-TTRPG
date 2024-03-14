@@ -67,6 +67,16 @@ public class Person {
     currHP -= damageTaken;
     return this.currHP;
   }
+
+  public void levelUp() {
+    if (level % 5 == 0) {
+      promptMultiClass();
+    }
+  }
+
+  public void promptMultiClass() {
+
+  }
   
   public int heal(int damageHealed) {
     if (damageHealed > maxHP) {
