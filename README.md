@@ -4,9 +4,12 @@ runme:
   version: v3
 ---
 
-# Brightrealm TTRPG
+# Saintsblade TTRPG
 
-Brightrealm University is a a fantasy-inspired TTRPG based on the experiences of academia.
+Saintsblade is a roleplaying game focused on designing a world/skeleton for homebrew space-opera tabletop adventures.
+As both a system and creative endeavor, Saintsblade provides users with a wide variety of races, classes, and locations
+to choose from and play with.
+
 
 # Toolbox
 
