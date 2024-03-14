@@ -17,7 +17,7 @@ public class Person {
   private Map<String, Integer> savingThrowMod;
   private List<String> officialSenses;
   private Map<String, Integer> senses;
-  private int walkingSpeed;
+  private int traversalSpeed;
   private int initiative;
   private int armorClass;
   private boolean inspiration;
@@ -52,10 +52,20 @@ public class Person {
 
   // TODO: add more methods such as
   public int takeDamage(int damageTaken) {
+    if (damageTaken >= currHP) {
+      currHP = 0;
+      return this.currHP;
+    }
+    currHP -= damageTaken;
     return this.currHP;
   }
   
   public int heal(int damageHealed) {
+    if (damageHealed > maxHP) {
+      int maxHeal = maxHP - damageHealed;
+      damageHealed = maxHP;
+    }
+    currHP = this.currHP + damageHealed;
     return this.currHP;
   }
 
@@ -93,70 +103,158 @@ public class Person {
   }
 
 /////////////// Getters and Setters /////////////////////////
-  public String getName() { return name; }
-  public void setName(String name) { this.name = name; }
+  public String getName() {
+    return name;
+  }
+  public void setName(String name) {
+    this.name = name;
+  }
 
-  public int getLevel() { return level; }
-  public void setLevel(int level) { this.level = level; }
+  public int getLevel() {
+    return level;
+  }
+  public void setLevel(int level) {
+    this.level = level;
+  }
 
-  public Map<RPGClass, Integer> getClasses() { return classes; }
-  public void setClass(Map<RPGClass, Integer> classes) { this.classes = classes; }
+  public Map<RPGClass, Integer> getClasses() {
+    return classes;
+  }
+  public void setClass(Map<RPGClass, Integer> classes) {
+    this.classes = classes;
+  }
   
-  public int getMaxHP() { return maxHP; }
-  public void setMaxHP(int maxHP) { this.maxHP = maxHP; }
+  public int getMaxHP() {
+    return maxHP;
+  }
+  public void setMaxHP(int maxHP) {
+    this.maxHP = maxHP;
+  }
 
-  public int getCurrHP() { return currHP; }
-  public void setCurrHP(int currHP) { this.currHP = currHP; }
+  public int getCurrHP() {
+    return currHP;
+  }
+  public void setCurrHP(int currHP) {
+    this.currHP = currHP;
+  }
 
-  public List<String> getOfficialStats() { return officialStats; }
-  public void setOfficialStats(List<String> officialStats) { this.officialStats = officialStats; }
+  public List<String> getOfficialStats() {
+    return officialStats;
+  }
+  public void setOfficialStats(List<String> officialStats) {
+    this.officialStats = officialStats;
+  }
 
-  public Map<String, Integer> getStats() { return stats; }
-  public void setStats(Map<String, Integer> stats) { this.stats = stats; }
+  public Map<String, Integer> getStats() {
+    return stats;
+  }
+  public void setStats(Map<String, Integer> stats) {
+    this.stats = stats;
+  }
 
-  public Map<String, Integer> getSavingThrowMod() { return savingThrowMod; }
-  public void setSavingThrowMod(Map<String, Integer> savingThrowMod) { this.savingThrowMod = savingThrowMod; }
+  public Map<String, Integer> getSavingThrowMod() {
+    return savingThrowMod;
+  }
+  public void setSavingThrowMod(Map<String, Integer> savingThrowMod) {
+    this.savingThrowMod = savingThrowMod;
+  }
 
-  public Map<String, Integer> getSenses() { return senses; }
-  public void setSenses(Map<String, Integer> senses) { this.senses = senses; }
+  public Map<String, Integer> getSenses() {
+    return senses;
+  }
+  public void setSenses(Map<String, Integer> senses) {
+    this.senses = senses;
+  }
 
-  public int getWalkingSpeed() { return walkingSpeed; }
-  public void setWalkingSpeed(int walkingSpeed) { this.walkingSpeed = walkingSpeed; }
+  public int getTraversalSpeed() {
+    return traversalSpeed;
+  }
+  public void setTraversalSpeed(int traversalSpeed) {
+    this.traversalSpeed = traversalSpeed;
+  }
 
-  public int getInitiative() { return initiative; }
-  public void setInitiative(int initiative) { this.initiative = initiative; }
+  public int getInitiative() {
+    return initiative;
+  }
+  public void setInitiative(int initiative) {
+    this.initiative = initiative;
+  }
 
-  public int getArmorClass() { return armorClass; }
-  public void setArmorClass(int armorClass) { this.armorClass = armorClass; }
+  public int getArmorClass() {
+    return armorClass;
+  }
+  public void setArmorClass(int armorClass) {
+    this.armorClass = armorClass;
+  }
 
-  public boolean isInspiration() { return inspiration; }
-  public void setInspiration(boolean inspiration) { this.inspiration = inspiration; }
+  public boolean isInspiration() {
+    return inspiration;
+  }
+  public void setInspiration(boolean inspiration) {
+    this.inspiration = inspiration;
+  }
 
-  public List<Condition> getCurrConditions() { return currConditions; }
-  public void setCurrConditions(List<Condition> currConditions) { this.currConditions = currConditions; }
+  public List<Condition> getCurrConditions() {
+    return currConditions;
+  }
+  public void setCurrConditions(List<Condition> currConditions) {
+    this.currConditions = currConditions;
+  }
 
-  public List<String> getOfficialSkills() { return officialSkills; }
-  public void setOfficialSkills(List<String> officialSkills) { this.officialSkills = officialSkills; }
+  public List<String> getOfficialSkills() {
+    return officialSkills;
+  }
+  public void setOfficialSkills(List<String> officialSkills) {
+    this.officialSkills = officialSkills;
+  }
 
-  public Map<String, Integer> getSkillMod() { return skillMod; }
-  public void setSkillMod(Map<String, Integer> skillMod) { this.skillMod = skillMod; }
+  public Map<String, Integer> getSkillMod() {
+    return skillMod;
+  }
+  public void setSkillMod(Map<String, Integer> skillMod) {
+    this.skillMod = skillMod;
+  }
 
-  public int getProficiencyBonus() { return proficiencyBonus; }
-  public void setProficiencyBonus(int proficiencyBonus) { this.proficiencyBonus = proficiencyBonus; }
+  public int getProficiencyBonus() {
+    return proficiencyBonus;
+  }
+  public void setProficiencyBonus(int proficiencyBonus) {
+    this.proficiencyBonus = proficiencyBonus;
+  }
 
-  public List<String> getOfficialProficiencies() { return officialProficiencies; }
-  public void setOfficialProficiencies(List<String> officialProficiencies) { this.officialProficiencies = officialProficiencies; }
+  public List<String> getOfficialProficiencies() {
+    return officialProficiencies;
+  }
+  public void setOfficialProficiencies(List<String> officialProficiencies) {
+    this.officialProficiencies = officialProficiencies;
+  }
 
-  public Map<String, List<String>> getProficiencies() { return proficiencies; }
-  public void setProficiencies(Map<String, List<String>> proficiencies) { this.proficiencies = proficiencies; }
+  public Map<String, List<String>> getProficiencies() {
+    return proficiencies;
+  }
+  public void setProficiencies(Map<String, List<String>> proficiencies) {
+    this.proficiencies = proficiencies;
+  }
 
-  public List<Spell> getSpells() { return spells; }
-  public void setSpells(List<Spell> spells) { this.spells = spells; }
+  public List<Spell> getSpells() {
+    return spells;
+  }
+  public void setSpells(List<Spell> spells) {
+    this.spells = spells;
+  }
 
-  public List<Gear> getInventory() { return inventory; }
-  public void setInventory(List<Gear> inventory) { this.inventory = inventory; }
+  public List<Gear> getInventory() {
+    return inventory;
+  }
+  public void setInventory(List<Gear> inventory) {
+    this.inventory = inventory;
+  }
 
-  public List<Feature> getFeatures() { return features; }
-  public void setFeatures(List<Feature> features) { this.features = features; }
+  public List<Feature> getFeatures() {
+    return features;
+  }
+  public void setFeatures(List<Feature> features) {
+    this.features = features;
+  }
 
 }
