@@ -69,6 +69,7 @@ public class Person {
   }
 
   public void levelUp() {
+    this.level++;
     if (this.level % 5 == 0) {
       promptMultiClass();
     }
