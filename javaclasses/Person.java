@@ -140,6 +140,7 @@ public class Person {
   public String getName() {
     return name;
   }
+
   public void setName(String name) {
     this.name = name;
   }
@@ -147,20 +148,31 @@ public class Person {
   public int getLevel() {
     return level;
   }
+
   public void setLevel(int level) {
     this.level = level;
+  }
+
+  public Lineage getLineage() {
+    return lineage;
+  }
+
+  public void setLineage(Lineage lineage) {
+    this.lineage = lineage;
   }
 
   public Map<RPGClass, Integer> getClasses() {
     return classes;
   }
-  public void setClass(Map<RPGClass, Integer> classes) {
+
+  public void setClasses(Map<RPGClass, Integer> classes) {
     this.classes = classes;
   }
-  
+
   public int getMaxHP() {
     return maxHP;
   }
+
   public void setMaxHP(int maxHP) {
     this.maxHP = maxHP;
   }
@@ -168,6 +180,7 @@ public class Person {
   public int getCurrHP() {
     return currHP;
   }
+
   public void setCurrHP(int currHP) {
     this.currHP = currHP;
   }
@@ -175,6 +188,7 @@ public class Person {
   public List<String> getOfficialStats() {
     return officialStats;
   }
+
   public void setOfficialStats(List<String> officialStats) {
     this.officialStats = officialStats;
   }
@@ -182,6 +196,7 @@ public class Person {
   public Map<String, Integer> getStats() {
     return stats;
   }
+
   public void setStats(Map<String, Integer> stats) {
     this.stats = stats;
   }
@@ -189,13 +204,23 @@ public class Person {
   public Map<String, Integer> getSavingThrowMod() {
     return savingThrowMod;
   }
+
   public void setSavingThrowMod(Map<String, Integer> savingThrowMod) {
     this.savingThrowMod = savingThrowMod;
+  }
+
+  public List<String> getOfficialSenses() {
+    return officialSenses;
+  }
+
+  public void setOfficialSenses(List<String> officialSenses) {
+    this.officialSenses = officialSenses;
   }
 
   public Map<String, Integer> getSenses() {
     return senses;
   }
+
   public void setSenses(Map<String, Integer> senses) {
     this.senses = senses;
   }
@@ -203,6 +228,7 @@ public class Person {
   public int getTraversalSpeed() {
     return traversalSpeed;
   }
+
   public void setTraversalSpeed(int traversalSpeed) {
     this.traversalSpeed = traversalSpeed;
   }
@@ -210,6 +236,7 @@ public class Person {
   public int getInitiative() {
     return initiative;
   }
+
   public void setInitiative(int initiative) {
     this.initiative = initiative;
   }
@@ -217,6 +244,7 @@ public class Person {
   public int getArmorClass() {
     return armorClass;
   }
+
   public void setArmorClass(int armorClass) {
     this.armorClass = armorClass;
   }
@@ -224,6 +252,7 @@ public class Person {
   public boolean isInspiration() {
     return inspiration;
   }
+
   public void setInspiration(boolean inspiration) {
     this.inspiration = inspiration;
   }
@@ -231,6 +260,7 @@ public class Person {
   public List<Condition> getCurrConditions() {
     return currConditions;
   }
+
   public void setCurrConditions(List<Condition> currConditions) {
     this.currConditions = currConditions;
   }
@@ -238,6 +268,7 @@ public class Person {
   public List<String> getOfficialSkills() {
     return officialSkills;
   }
+
   public void setOfficialSkills(List<String> officialSkills) {
     this.officialSkills = officialSkills;
   }
@@ -245,6 +276,7 @@ public class Person {
   public Map<String, Integer> getSkillMod() {
     return skillMod;
   }
+
   public void setSkillMod(Map<String, Integer> skillMod) {
     this.skillMod = skillMod;
   }
@@ -252,6 +284,7 @@ public class Person {
   public int getProficiencyBonus() {
     return proficiencyBonus;
   }
+
   public void setProficiencyBonus(int proficiencyBonus) {
     this.proficiencyBonus = proficiencyBonus;
   }
@@ -259,6 +292,7 @@ public class Person {
   public List<String> getOfficialProficiencies() {
     return officialProficiencies;
   }
+
   public void setOfficialProficiencies(List<String> officialProficiencies) {
     this.officialProficiencies = officialProficiencies;
   }
@@ -266,6 +300,7 @@ public class Person {
   public Map<String, List<String>> getProficiencies() {
     return proficiencies;
   }
+
   public void setProficiencies(Map<String, List<String>> proficiencies) {
     this.proficiencies = proficiencies;
   }
@@ -273,6 +308,7 @@ public class Person {
   public List<Spell> getSpells() {
     return spells;
   }
+
   public void setSpells(List<Spell> spells) {
     this.spells = spells;
   }
@@ -280,6 +316,7 @@ public class Person {
   public List<Gear> getInventory() {
     return inventory;
   }
+
   public void setInventory(List<Gear> inventory) {
     this.inventory = inventory;
   }
@@ -287,8 +324,8 @@ public class Person {
   public List<Feature> getFeatures() {
     return features;
   }
+
   public void setFeatures(List<Feature> features) {
     this.features = features;
   }
-
 }
