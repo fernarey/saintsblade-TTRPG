@@ -4,14 +4,14 @@ import java.util.List;
 import java.util.Map;
 
 public class Person {
-  // basic information
+  // BASICS
   private String name;
   private int level;
   private Map<RPGClass, Integer> classes;
   private int maxHP;
   private int currHP;
 
-  // stats
+  // STATS
   private List<String> officialStats;
   private Map<String, Integer> stats;
   private Map<String, Integer> savingThrowMod;
@@ -23,22 +23,22 @@ public class Person {
   private boolean inspiration;
   private List<Condition> currConditions;
 
-  // skills
+  // SKILLS
   private List<String> officialSkills;
   private Map<String, Integer> skillMod;
 
-  // proficiencies
+  // PROFICIENCIES
   private int proficiencyBonus;
   private List<String> officialProficiencies;
   private Map<String, List<String>> proficiencies;
 
-  // available information
+  // INFORMATION
   private List<Spell> spells;
   private List<Gear> inventory;
   private List<Feature> features;
 
 
-  // METHOD: basic constuctor, takes no inputs
+  // METHOD: CONSTRUCTOR OF "PERSON"
   public Person() {
     // TODO
   }
