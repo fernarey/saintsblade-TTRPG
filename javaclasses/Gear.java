@@ -44,16 +44,33 @@ public class Gear {
     return "";
   }
 
-  // Getter and Setter methods for name field
-  public String getName() { return name; }
-  public void setName(String name) { this.name = name; }
 
-  // Getter and Setter methods for desc field
-  public String getDesc() { return desc; }
-  public void setDesc(String desc) { this.desc = desc; }
+  ///////////////// GETTERS AND SETTERS ////////////////////////
+  // Getter and Setter methods for name
+  public String getName() {
+    return name;
+  }
 
-  // Getter and Setter methods for price field
-  public int getPrice() { return price; }
-  public void setPrice(int price) { this.price = price; }
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  // Getter and Setter methods for desc
+  public String getDesc() {
+    return desc;
+  }
+
+  public void setDesc(String desc) {
+    this.desc = desc;
+  }
+
+  // Getter and Setter methods for price
+  public int getPrice() {
+    return price;
+  }
+
+  public void setPrice(int price) {
+    this.price = price;
+  }
 
 }

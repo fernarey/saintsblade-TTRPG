@@ -3,6 +3,7 @@ import java.util.List;
 
 public class Spell {
   private String name;
+  // TODO: add any other fields that you find necessary
   private String desc;
   private List<RPGClass> availableTo;
   private int level;
@@ -52,25 +53,5 @@ public class Spell {
     return "";
   }
 
-  // Getters
-  public String getName() { return name; }
-  public String getDesc() { return desc; }
-  public List<RPGClass> getAvailableTo() { return availableTo; }
-  public int getLevel() { return level; }
-  public int getRange() { return range; }
-  public int getCastingTime() { return castingTime; }
-  public int getDuration() { return duration; }
-  public String getSave() { return save; }
-  public int[] getDamageRange() { return damageRange; }
-
-  // Setters
-  public void setName(String name) { this.name = name; }
-  public void setDesc(String desc) { this.desc = desc; }
-  public void setAvailableTo(List<RPGClass> availableTo) { this.availableTo = availableTo; }
-  public void setLevel(int level) { this.level = level; }
-  public void setRange(int range) { this.range = range; }
-  public void setCastingTime(int castingTime) { this.castingTime = castingTime; }
-  public void setDuration(int duration) { this.duration = duration; }
-  public void setSave(String save) { this.save = save; }
-  public void setDamageRange(int[] damageRange) { this.damageRange = damageRange; }
+// hmu whenever u want getter and setter methods
 }

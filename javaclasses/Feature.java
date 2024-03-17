@@ -8,15 +8,23 @@ public class Feature {
   private String reset; // either "long rest" or "short rest"
 
   // METHOD: basic constructor
-  // initializes data structures
+  // BEHAVIOR: creates a new Feature object with all the fields instantiates without 
+  // any relevant values
+  // RETURN: an "empty" Feature object
+  // PARAMETERS: none!
   public Feature() {
-    // TODO
+    // TODO: make name, desc, and reset empty
+    // TODO: make slots an empty list
   }
 
   // METHOD: more in-depth constructor
+
   public Feature(String name, String desc, List<Boolean> slots, String reset) {
-    // TODO
+    this.name = name;
+    // TODO: etc.
   }
+
+  // TODO: add more methods
 
   /////////////// Java Object Methods /////////////////////////
 
@@ -27,7 +35,7 @@ public class Feature {
     // TODO
   }
 
-  // METHOD: determines if two characters are the same
+  // METHOD: determines if two conditions are the same
   @Override
   public boolean equals(Object other){
     return false;
@@ -41,25 +49,49 @@ public class Feature {
     return name.hashCode();
   }
 
+  // METHOD: creates a String representation of the Feature object
+  // with all the relevant information
   @Override
   public String toString() {
     // TODO
     return "";
   }
 
-  // Getter and Setter for name
-  public String getName() { return name; }
-  public void setName(String name) { this.name = name; }
+  //////////////// GETTERS AND SETTERS ///////////////////
 
-  // Getter and Setter for desc
-  public String getDesc() { return desc; }
-  public void setDesc(String desc) { this.desc = desc; }
+  // Getter and Setter for 'name' field
+  public String getName() {
+    return name;
+  }
 
-  // Getter and Setter for slots
-  public List<Boolean> getSlots() { return slots; }
-  public void setSlots(List<Boolean> slots) { this.slots = slots; }
+  public void setName(String name) {
+    this.name = name;
+  }
 
-  // Getter and Setter for reset
-  public String getReset() { return reset; }
-  public void setReset(String reset) { this.reset = reset; }
+  // Getter and Setter for 'desc' field
+  public String getDesc() {
+    return desc;
+  }
+
+  public void setDesc(String desc) {
+    this.desc = desc;
+  }
+
+  // Getter and Setter for 'slots' field
+  public List<Boolean> getSlots() {
+    return slots;
+  }
+
+  public void setSlots(List<Boolean> slots) {
+    this.slots = slots;
+  }
+
+  // Getter and Setter for 'reset' field
+  public String getReset() {
+    return reset;
+  }
+
+  public void setReset(String reset) {
+    this.reset = reset;
+  }
 }

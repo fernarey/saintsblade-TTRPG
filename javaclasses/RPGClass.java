@@ -1,10 +1,11 @@
 package javaclasses;
+import java.util.Map;
 import java.util.List;
 
 public class RPGClass {
   private String name;
-  private List<Feature> classFeatures;
-  private List<Spell> availableSpells;
+  private Map<Integer, List<Feature>> classFeatures;
+  private Map<Integer, List<Spell>> availableSpells;
   private List<Gear> startingInventory;
 
   // METHOD: basic constructor
@@ -14,8 +15,17 @@ public class RPGClass {
   }
 
   // METHOD: more in-depth constructor
-  public RPGClass(String name, List<Feature> classFeatures, List<Spell> availableSpells, List<Gear> startingInventory) {
+  public RPGClass(String name, Map<Integer, List<Feature>> classFeatures, Map<Integer, List<Spell>> availableSpells, List<Gear> startingInventory) {
     // TODO
+  }
+
+  // TODO: methods such as 
+  public List<Feature> featuresAt(int level) {
+    return this.classFeatures.get(level);
+  }
+
+  public void /* THIS IS WRONG */ spellsAt(int level) {
+
   }
 
   /////////////// Java Object Methods /////////////////////////
@@ -49,15 +59,39 @@ public class RPGClass {
   }
 
   /////////////// Getters and Setters /////////////////////////
-  public String getName() { return name; }
-  public void setName(String name) { this.name = name; }
+  // Getter and Setter methods for name field
+  public String getName() {
+    return name;
+  }
 
-  public List<Feature> getClassFeatures() { return classFeatures; }
-  public void setClassFeatures(List<Feature> classFeatures) { this.classFeatures = classFeatures; }
+  public void setName(String name) {
+    this.name = name;
+  }
 
-  public List<Spell> getAvailableSpells() { return availableSpells; }
-  public void setAvailableSpells(List<Spell> availableSpells) { this.availableSpells = availableSpells; }
+  // Getter and Setter methods for classFeatures field
+  public Map<Integer, List<Feature>> getClassFeatures() {
+    return classFeatures;
+  }
 
-  public List<Gear> getStartingInventory() { return startingInventory; }
-  public void setStartingInventory(List<Gear> startingInventory) { this.startingInventory = startingInventory; }
+  public void setClassFeatures(Map<Integer, List<Feature>> classFeatures) {
+    this.classFeatures = classFeatures;
+  }
+
+  // Getter and Setter methods for availableSpells field
+  public Map<Integer, List<Spell>> getAvailableSpells() {
+    return availableSpells;
+  }
+
+  public void setAvailableSpells(Map<Integer, List<Spell>> availableSpells) {
+    this.availableSpells = availableSpells;
+  }
+
+  // Getter and Setter methods for startingInventory field
+  public List<Gear> getStartingInventory() {
+    return startingInventory;
+  }
+
+  public void setStartingInventory(List<Gear> startingInventory) {
+    this.startingInventory = startingInventory;
+  }
 }

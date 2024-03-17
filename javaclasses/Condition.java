@@ -40,15 +40,30 @@ public class Condition {
   }
 
   /////////////// Getters and Setters /////////////////////////
-  public String getName() { return name; }
-  public void setName(String name) { this.name = name; }
+  // Getter and Setter for name
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
 
   // Getter and Setter for desc
-  public String getDesc() { return desc; }
-  public void setDesc(String desc) { this.desc = desc; }
+  public String getDesc() {
+    return desc;
+  }
+
+  public void setDesc(String desc) {
+    this.desc = desc;
+  }
 
   // Getter and Setter for affectedSenses
-  public Map<String, Integer> getAffectedSenses() { return affectedSenses; }
-  public void setAffectedSenses(Map<String, Integer> affectedSenses) { this.affectedSenses = affectedSenses; }
+  public Map<String, Integer> getAffectedSenses() {
+    return affectedSenses;
+  }
 
+  public void setAffectedSenses(Map<String, Integer> affectedSenses) {
+    this.affectedSenses = affectedSenses;
+  }
 }

@@ -2,7 +2,6 @@ package javaclasses;
 
 import java.util.List;
 import java.util.Map;
-import java.io.*;
 import java.util.Random;
 
 public class Person {
@@ -42,23 +41,27 @@ public class Person {
 
 
   // METHOD: CONSTRUCTOR OF "PERSON"
+  // BEHAVIOR: creates an empty Person object, meaning that all data structures have been
+  // created but hold no relevant values
+  // RETURN: an "empty" Person object, with all data sturctures able to be added to
+  // PARAMETERS: none!
   public Person() {
     // TODO: initialize all data structures
+    // i.e. make empty Maps and Lists
+    // create the "officialStats" and "officialSenses" lists and fill with values
   }
 
   // METHOD: more specific constructor, mostly for testing
+  // BEHAVIOR: gives the relevant data structures values
+  // RETURN: a fully instantiated Person object with no empty fields
+  // PARAMETERS: as many as you want
   public Person(String name, int level) {
     this.name = name;
     this.level = level;
     // TODO
   }
 
-  public void setAllStats(int stat1, int stat2, int stat3, int stat4, int stat5) {
-    // TODO: update stats
-    // update HP
-    // update senses
-    // update initiative, etc.
-  }
+  /////////////// CHARACTER CREATION ///////////////////////
 
   // TODO: add more methods such as
   public int takeDamage(int damageTaken) {
@@ -89,6 +92,13 @@ public class Person {
   public void promptMultiClass() {
 
   }
+  
+  public void setAllStats(int stat1, int stat2, int stat3, int stat4, int stat5) {
+    // TODO: update stats
+    // update HP
+    // update senses
+    // update initiative, etc.
+  }
 
   public int rollInitiative() {
     Random r = new Random();
@@ -115,15 +125,14 @@ public class Person {
 
 /////////////// Java Object Methods /////////////////////////
 
-  // METHOD: cloning method
-  // returns a copy of the Person
+  // METHOD: cloning method, returns a copy of the Person
   @Override
   public Person clone(){
     return this; 
     // TODO
   }
 
-  // METHOD: determines if two Persons are the same
+  // METHOD: determines if two Persons are the same by comparing relevant fields
   @Override
   public boolean equals(Object other){
     return false;
